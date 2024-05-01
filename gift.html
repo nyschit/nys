@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose a Gift</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        transition: background-color 0.5s ease;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: #ff3ff5;
+        color: #ffffff;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CONGRATULATIONS!!!! NOW Choose a Gift</h1>
+
+    <div id="gif">
+    <img src="https://gifdb.com/images/high/happy-celebration-cat-yay-50cv51lv3s425ax6.gif" alt="Gift option GIF">
+</div>
+
+    <button id="gift1">Gift 1</button>
+    <button id="gift2">Gift 2</button>
+    <button id="gift3">Gift 3</button>
+
+    <div id="result"></div>
+
+    <script>
+      const gift1Button = document.getElementById('gift1')
+      const gift2Button = document.getElementById('gift2')
+      const gift3Button = document.getElementById('gift3')
+      const resultDiv = document.getElementById('result')
+
+      gift1Button.addEventListener('click', () => {
+        resultDiv.innerText = "You've chosen Gift 1. i will take you to buy a plushies of your choise"
+        document.body.style.backgroundColor = '#d3e0ff' // Change page color to light blue
+      })
+
+      gift2Button.addEventListener('click', () => {
+        resultDiv.innerText = "You've chosen Gift 2. i will take you to your favourite cafe or any place to eat "
+        document.body.style.backgroundColor = '#e0f2f1' // Change page color to light green
+      })
+
+      gift3Button.addEventListener('click', () => {
+        resultDiv.innerText = "You've chosen Gift 3. it will be a surprise gift "
+        document.body.style.backgroundColor = '#FFB6C1' // Change page color to light pink
+      })
+    </script>
+  </body>
+</html>
